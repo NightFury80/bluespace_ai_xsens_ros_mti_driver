@@ -130,3 +130,15 @@ Notes:
 Acknowledgement:
     Thank you to Steven Gies and his engineering team at Xsens Technologies for testing this driver against their complete MTi IMU product portfolio and reviewing the driver source.
     
+    
+    
+    
+    
+    
+    
+Additional fix:
+1. https://github.com/bluespace-ai/bluespace_ai_xsens_ros_mti_driver/issues/16 
+
+   1.1 Update the threading.cpp -- "https://github.com/bluespace-ai/bluespace_ai_xsens_ros_mti_driver/pull/17/files"
+   1.2 Rebuilt the "xspublic" library after making changes to threading.cpp, force this from the "xspublic" folder using "make -B". After that, run "colcon build" again.
+   1.3 Revert the params file to "scan_for_devices: true" and "port: "" "  
